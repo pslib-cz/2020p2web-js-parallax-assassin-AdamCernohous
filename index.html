@@ -25,5 +25,23 @@
         <p>Lorem ipsum</p>
         <p>Creating parallax effect</p>
     </section>
+
+    <script>
+        let bg = document.getElementsByClassName("layer-background")[0];
+        let l1 = document.getElementsByClassName("layer-1")[0];
+        let l2 = document.getElementsByClassName("layer-2")[0];
+        let l3 = document.getElementsByClassName("layer-man")[0];
+        let l4 = document.getElementsByClassName("layer-4")[0];
+
+        window.addEventListener("scroll", paralax =  () => {
+            let distance = window.scrollY;
+
+            l1.style.top = -distance * 0.25 + "px";
+            l2.style.top = -distance * 0.5 + "px";
+            l3.style.top = -distance * 1 + "px";
+            l4.style.top = -distance * 1 + "px";
+            l4.style.left = -distance * 1 + "px";
+        })
+    </script>
 </body>
 </html>
